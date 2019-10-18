@@ -18,6 +18,9 @@
   antd
   antd 和less 
   将less的版本从3版本降低到2.7.3  npm install less@2.7.3
+  按需引入
+  1. 安装插件 npm  install babel-plugins-import
+  2. webpack.config.js babel-loader ['import',{ "libraryName": "antd", style: true }],
 3.公有插件
   redux
   router
