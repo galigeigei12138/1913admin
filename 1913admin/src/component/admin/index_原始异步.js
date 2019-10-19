@@ -6,15 +6,16 @@ import  {bindActionCreators}from 'redux'
 import ActionCreator from '../../store/actionCreator'
 import './index.less'
 class Admin extends Component{
- componentDidMount(){
-  //  this.props.changeTokenModal()
-  // 调用异步action
-  this.props.changeTokenModalAsync()
-  // setTimeout(()=>{
-      //  调用同步action
-  //   this.props.changeTokenModal(true)
-  // },1000)
- }
+  componentDidMount(){
+    // 验证是否登录
+    setTimeout(()=>{
+      if(false){
+
+      }else{
+        this.props.changeTokenModal(true)
+      }
+    },1000)
+  }
   render(){
     console.log(this,'admin')
     return(

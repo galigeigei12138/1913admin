@@ -7,7 +7,7 @@ import {HashRouter,Switch,Redirect,Route} from 'react-router-dom'
 // 将需要路由懒加载的组件 作为第一个参数
 const Login = ComponentImport(()=>import('./component/login'))
 const Admin = ComponentImport(()=>import('./component/admin'))
-// const User = ComponentImport(()=>import('./component/user'))
+const UserList = ComponentImport(()=>import('./component/user'))
 const Home = ComponentImport(()=>import('./component/home'))
 class RootRouter extends Component{
   render(){
@@ -23,7 +23,7 @@ class RootRouter extends Component{
             return(
             <Admin>
                <Route path='/admin/home' component={Home}/>
-               {/* <Route path='/admin/user' component={User}/> */}
+               <Route path='/admin/user/list' component={UserList}/>
             </Admin> 
             )
           }}/>

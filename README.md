@@ -46,3 +46,27 @@
 7.手机验证码
 8.图片验证码 
 9.滑动图片验证码
+### 异步中间件
+react-redux 中actionCreatore 处理异步问题
+react 全局状态管理中如何处理异步问题
+redux-thunk  redux-sage redux-promise 。。。。 
+
+1. store.js
+import  {createStore,applyMiddle} from 'redux'
+import thunk from 'reudx-thunk'
+import reducer from './reducer'
+export default createStore(reducer,applyMiddle(thunk))
+2.actionCreator
+export default{
+  changeNum(params){
+    let action={}
+    return action
+  },
+  changeNumAsync(params){
+    return (dispath)=>{
+      <!-- 异步请求 -->
+      异步请求结束之后
+      dispath(action)
+    }
+  }
+}
