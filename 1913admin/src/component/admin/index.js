@@ -3,6 +3,7 @@ import CustomNav from  '../customNav'
 import  TokenModal from '../modal'
 import  {connect} from 'react-redux'
 import  {bindActionCreators}from 'redux'
+import Header from '../header'
 import ActionCreator from '../../store/actionCreator'
 import './index.less'
 class Admin extends Component{
@@ -25,13 +26,13 @@ class Admin extends Component{
         </div>
         <div className='admin-content'>
           <div>
-            头部信息
+             <Header></Header>
           </div>
           <div>
               {this.props.children}
           </div>
-          <div>
-            底部信息
+          <div className='footer'>
+             呵呵哒
           </div>
         </div>
     </div>

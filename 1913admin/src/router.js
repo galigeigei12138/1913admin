@@ -8,6 +8,7 @@ import {HashRouter,Switch,Redirect,Route} from 'react-router-dom'
 const Login = ComponentImport(()=>import('./component/login'))
 const Admin = ComponentImport(()=>import('./component/admin'))
 const UserList = ComponentImport(()=>import('./component/user'))
+const UserAdd = ComponentImport(()=>import('./component/userAdd'))
 const Home = ComponentImport(()=>import('./component/home'))
 class RootRouter extends Component{
   render(){
@@ -24,6 +25,7 @@ class RootRouter extends Component{
             <Admin>
                <Route path='/admin/home' component={Home}/>
                <Route path='/admin/user/list' component={UserList}/>
+               <Route path='/admin/user/add' component={UserAdd}/>
             </Admin> 
             )
           }}/>

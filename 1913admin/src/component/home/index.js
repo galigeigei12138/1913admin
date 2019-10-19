@@ -14,7 +14,7 @@ class Login extends Component{
                 name: '访问来源',
                 type: 'pie',
                 radius : '55%',
-                center: ['55%', '60%'],
+                center: ['50%', '25%'],
                 data:[],
                 
             }
@@ -41,21 +41,24 @@ class Login extends Component{
   render(){
     return(
       <Card className='home-box'>
+        <Card style={{width:'200px',height:'200px'}}>
           <ReactEcharts option={this.state.option} />
-          <hr/>
+        </Card>  
+        <Card>
           <ReactEcharts option={{
-    xAxis: {
-        type: 'category',
-        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-    },
-    yAxis: {
-        type: 'value'
-    },
-    series: [{
-        data: [120, 200, 150, 80, 70, 110, 130],
-        type: 'bar'
-    }]
-}} />
+            xAxis: {
+              type: 'category',
+              data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {
+              type: 'value'
+            },
+            series: [{
+              data: [120, 200, 150, 80, 70, 110, 130],
+              type: 'bar'
+            }]
+          }} />
+        </Card>
       </Card>
 
     )

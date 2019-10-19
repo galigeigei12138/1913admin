@@ -88,7 +88,14 @@ module.exports = function(proxy, allowedHost) {
         pathRewrite:{
           '^/yapi':''
         }
-      }
+      },
+      '/api':{
+        target:'http://localhost:3000',
+        changeOrigin:true,
+        pathRewrite:{
+          '^/api':''
+        }
+      },
     },
     before(app, server) {
       if (fs.existsSync(paths.proxySetup)) {
